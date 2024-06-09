@@ -1,0 +1,12 @@
+[package]
+name = 'loc'
+version = '0.1.0'
+edition = '2021'
+
+[lib]
+crate-type = [ 'staticlib' ]
+name = 'loc'
+
+[dependencies]
+extendr-api = '*'
+tokei = "12.1.2"
