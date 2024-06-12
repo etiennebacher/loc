@@ -10,9 +10,16 @@
 #' @export
 #'
 #' @examples
-#' count_loc()
+#' tmp <- tempfile(fileext = ".R")
+#' cat("
+#' library(loc)
+#' # This is a wrong function
+#' foo <- function(x) {
+#'   x + 1
+#' }
 #'
-#' count_loc("R/count_loc.R")
+#' ", file = tmp)
+#' count_loc(tmp)
 count_loc <- function(paths = ".", excluded = NULL, include_hidden = FALSE, languages = "R") {
   if (is.null(excluded)) {
     excluded <- paste(sample(letters, 100, TRUE), collapse = "")
