@@ -1,11 +1,15 @@
 Package: loc
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Title: Count Lines of Code
+Version: 0.0.1
+Authors@R: 
+    person(given = "Etienne",
+           family = "Bacher",
+           role = c("aut", "cre", "cph"),
+           email = "etienne.bacher@protonmail.com")
+Description: Use the 'Tokei' Rust crate to count lines of code in files and 
+    folders. It supports dozens of different languages, and also provides 
+    statistics on blank lines and comments.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
