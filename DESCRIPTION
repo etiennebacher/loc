@@ -11,3 +11,6 @@ Encoding: UTF-8
 LazyData: true
 Config/rextendr/version: 0.3.1
 RoxygenNote: 7.3.1
+Roxygen: list(markdown = TRUE)
+URL: https://github.com/etiennebacher/loc
+BugReports: https://github.com/etiennebacher/loc/issues
