@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# LOC
+# loc
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -23,6 +23,9 @@ knitr::opts_chunk$set(
 `loc` provides a single function, `count_loc()`, whose purpose is to count lines
 of code. You can provide specific paths to include or exclude, consider hidden
 files or not, and you have access to a [long list of languages](https://github.com/XAMPPRocky/tokei?tab=readme-ov-file#supported-languages).
+
+Under the hood, `loc` uses the [`tokei`](https://github.com/XAMPPRocky/tokei)
+Rust crate.
 
 ## Installation
 
