@@ -1,5 +1,5 @@
 
 if ( requireNamespace("tinytest", quietly=TRUE) ){
-  tinytest::test_package("tidypolars", testdir = "tinytest")
+  tinytest::test_package("loc", testdir = "tinytest")
 }
 
