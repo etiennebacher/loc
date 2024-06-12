@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# LOC
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+**WIP**
+
+`loc` provides a single function, `count_loc()`, whose purpose is to count lines
+of code. You can provide specific paths to include or exclude, consider hidden
+files or not, and you have access to a [long list of languages](https://github.com/XAMPPRocky/tokei?tab=readme-ov-file#supported-languages).
+
+## Installation
+
+TODO
+
+## Example
+
+Here's what was needed to make this package:
+
+```{r}
+library(loc)
+
+count_loc(languages = c("R", "Rust"))
+```
+

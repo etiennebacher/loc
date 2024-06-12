@@ -11,7 +11,7 @@
 #' @useDynLib loc, .registration = TRUE
 NULL
 
-count_loc <- function() .Call(wrap__count_loc)
+internal_count_loc <- function(paths, excluded, include_hidden, languages) .Call(wrap__internal_count_loc, paths, excluded, include_hidden, languages)
 
 
 # nolint end
