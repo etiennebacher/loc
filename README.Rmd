@@ -27,9 +27,26 @@ files or not, and you have access to a [long list of languages](https://github.c
 Under the hood, `loc` uses the [`tokei`](https://github.com/XAMPPRocky/tokei)
 Rust crate.
 
+
 ## Installation
 
-TODO
+## Windows or macOS
+
+```{r eval=FALSE}
+install.packages(
+  'loc', 
+  repos = c('https://etiennebacher.r-universe.dev', getOption("repos"))
+)
+```
+
+## Linux
+```{r eval=FALSE}
+install.packages(
+  'loc', 
+  repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption("repos"))
+)
+```
+
 
 ## Example
 

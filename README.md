@@ -19,7 +19,23 @@ Under the hood, `loc` uses the
 
 ## Installation
 
-TODO
+## Windows or macOS
+
+``` r
+install.packages(
+  'loc', 
+  repos = c('https://etiennebacher.r-universe.dev', getOption("repos"))
+)
+```
+
+## Linux
+
+``` r
+install.packages(
+  'loc', 
+  repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption("repos"))
+)
+```
 
 ## Example
 
