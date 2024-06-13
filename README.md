@@ -28,19 +28,19 @@ Here’s what was needed to make this package:
 ``` r
 library(loc)
 
-count_loc(languages = c("R", "Rust"))
+count_loc(paths = c("R", "src"), languages = c("R", "Rust"))
 #> 
 #> Language: R 
 #> ===================
-#> Lines of code: 102 
-#> Blank lines:   25 
-#> Comments:      39 
+#> Lines of code: 37 
+#> Blank lines:   7 
+#> Comments:      32 
 #> Accurate:      Yes
 #> 
 #> Language: Rust 
 #> ===================
-#> Lines of code: 254 
-#> Blank lines:   10 
-#> Comments:      29 
+#> Lines of code: 249 
+#> Blank lines:   7 
+#> Comments:      28 
 #> Accurate:      Yes
 ```

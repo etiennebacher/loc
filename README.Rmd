@@ -38,6 +38,6 @@ Here's what was needed to make this package:
 ```{r}
 library(loc)
 
-count_loc(languages = c("R", "Rust"))
+count_loc(paths = c("R", "src"), languages = c("R", "Rust"))
 ```
 
