@@ -4,7 +4,7 @@ is_interactive_call <- is.null(sys.call())
 if (!is_interactive_call) {
   base <- getwd()
 } else {
-  base <- "./tests/tinytest"
+  base <- "tests/tinytest"
 }
 
 # basic example -----------------------------------------------
@@ -98,4 +98,42 @@ expect_equal(
 expect_error(
   count_loc(paths = NULL),
   "Must specify at least one path"
+)
+
+# excluded -----------------------------------------------
+
+out <- count_loc(
+  paths = file.path(base, "test_examples"),
+  excluded = file.path(base, "test_examples/file1.rs"),
+  languages = c("R", "Rust")
+)
+
+expect_equal(
+  out,
+  data.frame(
+    language = c("R", "Rust"),
+    blanks = c(5L, 0L),
+    comments = c(4L, 0L),
+    code = c(8L, 0),
+    inaccurate = c(FALSE, NA)
+  ) |>
+    structure(class = c("loc", "data.frame"))
+)
+
+out <- count_loc(
+  paths = file.path(base, "test_examples"),
+  excluded = file.path(base, "test_examples", "*"),
+  languages = c("R", "Rust")
+)
+
+expect_equal(
+  out,
+  data.frame(
+    language = c("R", "Rust"),
+    blanks = c(0L, 0L),
+    comments = c(0L, 0L),
+    code = c(0L, 0),
+    inaccurate = c(NA, NA)
+  ) |>
+    structure(class = c("loc", "data.frame"))
 )
