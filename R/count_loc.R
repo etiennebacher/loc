@@ -54,9 +54,9 @@ print.loc <- function(x, ...) {
   for (i in lang) {
     cat("\nLanguage:", i, "\n")
     cat("===================\n")
-    cat("Lines of code:", x[x$language == i, "code"], "\n")
-    cat("Blank lines:  ", x[x$language == i, "blanks"], "\n")
-    cat("Comments:     ", x[x$language == i, "comments"], "\n")
+    cat("Lines of code:", format(x[x$language == i, "code"], big.mark = ","), "\n")
+    cat("Blank lines:  ", format(x[x$language == i, "blanks"], big.mark = ","), "\n")
+    cat("Comments:     ", format(x[x$language == i, "comments"], big.mark = ","), "\n")
     cat("Accurate: ", ifelse(
       is.na(x[x$language == i, "inaccurate"]),
       "    NA",
