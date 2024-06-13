@@ -13,7 +13,7 @@
 #' tmp <- tempfile(fileext = ".R")
 #' cat("
 #' library(loc)
-#' # This is a wrong function
+#' # This is a function
 #' foo <- function(x) {
 #'   x + 1
 #' }
