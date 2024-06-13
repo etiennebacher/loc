@@ -62,8 +62,15 @@ expect_equal(
 expect_error(
   count_loc(
     paths = file.path(base, "test_examples"),
-    languages = c("R", "Rust", "Foo")
-  )
+    languages = c("R", "Rust", "Foo", "Foobar")
+  ),
+  "The following language(s) are unknown: Foo, Foobar",
+  fixed = TRUE
+)
+
+expect_error(
+  count_loc(languages = NULL),
+  "Must specify at least one language"
 )
 
 # paths -----------------------------------------------
@@ -86,4 +93,9 @@ expect_equal(
     inaccurate = c(FALSE, FALSE)
   ) |>
     structure(class = c("loc", "data.frame"))
+)
+
+expect_error(
+  count_loc(paths = NULL),
+  "Must specify at least one path"
 )

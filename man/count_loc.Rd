@@ -18,7 +18,7 @@ count_loc(
 
 \item{include_hidden}{Count hidden files and directories? Default is \code{FALSE}.}
 
-\item{languages}{Languages to consider. See the list here: \url{https://github.com/XAMPPRocky/tokei?tab=readme-ov-file#supported-languages}.}
+\item{languages}{Languages to consider. See the list here: \url{https:#github.com/XAMPPRocky/tokei?tab=readme-ov-file#supported-languages}.}
 }
 \value{
 A data.frame with 4 columns: number of blank lines, comments, code,
