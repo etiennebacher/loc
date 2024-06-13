@@ -42,6 +42,29 @@ expect_equal(
     structure(class = c("loc", "data.frame"))
 )
 
+out <- count_loc(
+  paths = file.path(base, "test_examples"),
+  languages = c("R", "Rust", "Bash")
+)
+
+expect_equal(
+  out,
+  data.frame(
+    language = c("R", "Rust", "Bash"),
+    blanks = c(5L, 3L, 0L),
+    comments = c(4L, 1L, 0L),
+    code = c(8L, 5L, 0L),
+    inaccurate = c(FALSE, FALSE, NA)
+  ) |>
+    structure(class = c("loc", "data.frame"))
+)
+
+expect_error(
+  count_loc(
+    paths = file.path(base, "test_examples"),
+    languages = c("R", "Rust", "Foo")
+  )
+)
 
 # paths -----------------------------------------------
 
