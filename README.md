@@ -48,15 +48,15 @@ count_loc(paths = c("R", "src"), languages = c("R", "Rust"))
 #> 
 #> Language: R 
 #> ===================
-#> Lines of code: 37 
-#> Blank lines:   7 
-#> Comments:      32 
+#> Lines of code: 266 
+#> Blank lines:   9 
+#> Comments:      60 
 #> Accurate:      Yes
 #> 
 #> Language: Rust 
 #> ===================
-#> Lines of code: 252 
-#> Blank lines:   8 
+#> Lines of code: 258 
+#> Blank lines:   7 
 #> Comments:      28 
 #> Accurate:      Yes
 ```
