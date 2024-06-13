@@ -50,7 +50,11 @@ print.loc <- function(x, ...) {
     cat("Lines of code:", x[x$language == i, "code"], "\n")
     cat("Blank lines:  ", x[x$language == i, "blanks"], "\n")
     cat("Comments:     ", x[x$language == i, "comments"], "\n")
-    cat("Accurate: ", ifelse(x[x$language == i, "inaccurate"], "    No", "    Yes"))
+    cat("Accurate: ", ifelse(
+      is.na(x[x$language == i, "inaccurate"]),
+      "    NA",
+      ifelse(x[x$language == i, "inaccurate"], "    No", "    Yes"))
+    )
     cat("\n")
   }
 }

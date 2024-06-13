@@ -4,7 +4,7 @@ use tokei::{Config, LanguageType, Languages};
 #[extendr]
 fn internal_count_loc(
     paths: Strings,
-    excluded: &str,
+    excluded: Strings,
     include_hidden: bool,
     languages: Strings,
 ) -> List {
@@ -13,7 +13,7 @@ fn internal_count_loc(
         ..Default::default()
     };
     let paths = paths.iter().map(|si| si.as_str()).collect::<Vec<_>>();
-    let excluded = &[excluded];
+    let excluded = excluded.iter().map(|si| si.as_str()).collect::<Vec<_>>();
 
     let requested_languages = languages
         .into_iter()
@@ -21,18 +21,27 @@ fn internal_count_loc(
         .collect::<Vec<LanguageType>>();
 
     let mut languages = Languages::new();
-    languages.get_statistics(paths.as_slice(), excluded, &config);
+    languages.get_statistics(paths.as_slice(), excluded.as_slice(), &config);
 
     let out = requested_languages
         .iter()
         .map(|xi| {
-            let res = &languages[xi];
-            list!(
-                blanks = r!(res.blanks as i32),
-                comments = r!(res.comments as i32),
-                code = r!(res.code as i32),
-                inaccurate = r!(res.inaccurate),
-            )
+            if languages.contains_key(xi) {
+                let res = &languages[xi];
+                list!(
+                    blanks = r!(res.blanks as i32),
+                    comments = r!(res.comments as i32),
+                    code = r!(res.code as i32),
+                    inaccurate = r!(res.inaccurate),
+                )
+            } else {
+                list!(
+                    blanks = 0,
+                    comments = 0,
+                    code = 0,
+                    inaccurate = Rbool::na_value(),
+                )
+            }
         })
         .collect::<List>();
 

@@ -4,9 +4,9 @@
 \name{loc-package}
 \alias{loc}
 \alias{loc-package}
-\title{loc: What the Package Does (Title Case)}
+\title{loc: Count Lines of Code}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Use the 'Tokei' Rust crate to count lines of code in files and folders. It supports dozens of different languages, and also provides statistics on blank lines and comments.
 }
 \seealso{
 Useful links:
@@ -14,5 +14,9 @@ Useful links:
   \item \url{https://github.com/etiennebacher/loc}
   \item Report bugs at \url{https://github.com/etiennebacher/loc/issues}
 }
+
+}
+\author{
+\strong{Maintainer}: Etienne Bacher \email{etienne.bacher@protonmail.com} [copyright holder]
 
 }
