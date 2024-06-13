@@ -19,7 +19,7 @@ Under the hood, `loc` uses the
 
 ## Installation
 
-## Windows or macOS
+### Windows or macOS
 
 ``` r
 install.packages(
@@ -28,7 +28,7 @@ install.packages(
 )
 ```
 
-## Linux
+### Linux
 
 ``` r
 install.packages(
@@ -55,8 +55,8 @@ count_loc(paths = c("R", "src"), languages = c("R", "Rust"))
 #> 
 #> Language: Rust 
 #> ===================
-#> Lines of code: 249 
-#> Blank lines:   7 
+#> Lines of code: 252 
+#> Blank lines:   8 
 #> Comments:      28 
 #> Accurate:      Yes
 ```

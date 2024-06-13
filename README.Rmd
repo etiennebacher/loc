@@ -30,7 +30,7 @@ Rust crate.
 
 ## Installation
 
-## Windows or macOS
+### Windows or macOS
 
 ```{r eval=FALSE}
 install.packages(
@@ -39,7 +39,8 @@ install.packages(
 )
 ```
 
-## Linux
+### Linux
+
 ```{r eval=FALSE}
 install.packages(
   'loc', 
