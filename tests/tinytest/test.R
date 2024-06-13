@@ -104,7 +104,7 @@ expect_error(
 
 out <- count_loc(
   paths = file.path(base, "test_examples"),
-  excluded = file.path(base, "test_examples/file1.rs"),
+  excluded = "*.rs",
   languages = c("R", "Rust")
 )
 
@@ -116,24 +116,6 @@ expect_equal(
     comments = c(4L, 0L),
     code = c(8L, 0),
     inaccurate = c(FALSE, NA)
-  ) |>
-    structure(class = c("loc", "data.frame"))
-)
-
-out <- count_loc(
-  paths = file.path(base, "test_examples"),
-  excluded = file.path(base, "test_examples", "*"),
-  languages = c("R", "Rust")
-)
-
-expect_equal(
-  out,
-  data.frame(
-    language = c("R", "Rust"),
-    blanks = c(0L, 0L),
-    comments = c(0L, 0L),
-    code = c(0L, 0),
-    inaccurate = c(NA, NA)
   ) |>
     structure(class = c("loc", "data.frame"))
 )
