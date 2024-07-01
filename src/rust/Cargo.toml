@@ -8,5 +8,5 @@ crate-type = [ 'staticlib' ]
 name = 'loc'
 
 [dependencies]
-extendr-api = '*'
+extendr-api = "0.7.0"
 tokei = "12.1.2"

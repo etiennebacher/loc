@@ -6,7 +6,6 @@
 # This file was created with the following call:
 #   .Call("wrap__make_loc_wrappers", use_symbols = TRUE, package_name = "loc")
 
-#' @docType package
 #' @usage NULL
 #' @useDynLib loc, .registration = TRUE
 NULL
