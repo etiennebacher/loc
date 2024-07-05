@@ -16,9 +16,8 @@ knitr::opts_chunk$set(
 # loc
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/etiennebacher/loc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/etiennebacher/loc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
-
-**WIP**
 
 `loc` provides a single function, `count_loc()`, whose purpose is to count lines
 of code. You can provide specific paths to include or exclude, consider hidden

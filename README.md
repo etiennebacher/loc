@@ -4,9 +4,9 @@
 # loc
 
 <!-- badges: start -->
-<!-- badges: end -->
 
-**WIP**
+[![R-CMD-check](https://github.com/etiennebacher/loc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/etiennebacher/loc/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 `loc` provides a single function, `count_loc()`, whose purpose is to
 count lines of code. You can provide specific paths to include or
@@ -50,7 +50,7 @@ count_loc(paths = c("R", "src"), languages = c("R", "Rust"))
 #> ===================
 #> Lines of code: 266 
 #> Blank lines:   9 
-#> Comments:      60 
+#> Comments:      59 
 #> Accurate:      Yes
 #> 
 #> Language: Rust 

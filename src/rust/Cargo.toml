@@ -7,6 +7,10 @@ edition = '2021'
 crate-type = [ 'staticlib' ]
 name = 'loc'
 
+[profile.release]
+lto = true
+codegen-units= 1
+
 [dependencies]
 extendr-api = "0.7.0"
 tokei = "12.1.2"
