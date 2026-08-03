@@ -13,12 +13,12 @@ Description: Use the 'Tokei' Rust crate to count lines of code in files and
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Config/rextendr/version: 0.3.1
+Config/rextendr/version: 0.5.0
 Depends: R (>= 4.2.0)
 Suggests: 
   tinytest
-RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/etiennebacher/loc
 BugReports: https://github.com/etiennebacher/loc/issues
 SystemRequirements: Cargo (Rust's package manager), rustc
+Config/roxygen2/version: 8.0.0
