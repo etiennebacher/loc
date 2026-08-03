@@ -12,12 +12,12 @@ fn internal_count_loc(
         hidden: Some(include_hidden),
         ..Default::default()
     };
-    let paths = paths.iter().map(|si| si.as_str()).collect::<Vec<_>>();
-    let excluded = excluded.iter().map(|si| si.as_str()).collect::<Vec<_>>();
+    let paths = paths.iter().map(|si| si.as_ref()).collect::<Vec<_>>();
+    let excluded = excluded.iter().map(|si| si.as_ref()).collect::<Vec<_>>();
 
     let requested_languages = languages
         .into_iter()
-        .map(|xi| string_to_language(xi.as_str()))
+        .map(|xi| string_to_language(xi.as_ref()))
         .collect::<Vec<LanguageType>>();
 
     let mut languages = Languages::new();

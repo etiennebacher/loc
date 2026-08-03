@@ -3,7 +3,7 @@ TARGET = $(subst 64,x86_64,$(subst 32,i686,$(WIN)))-pc-windows-gnu
 TARGET_DIR = ./rust/target
 LIBDIR = $(TARGET_DIR)/$(TARGET)/release
 STATLIB = $(LIBDIR)/libloc.a
-PKG_LIBS = -L$(LIBDIR) -lloc -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll -lsynchronization -lole32
+PKG_LIBS = -L$(LIBDIR) -lloc -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll -lsynchronization -lole32 -lwinapi_advapi32 -lwinapi_cfgmgr32 -lwinapi_gdi32 -lwinapi_kernel32 -lwinapi_msimg32 -lwinapi_ole32 -lwinapi_opengl32 -lwinapi_shell32 -lwinapi_user32 -lwinapi_winspool -lR -lkernel32 -ldbghelp
 
 all: C_clean
 
